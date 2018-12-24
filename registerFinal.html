@@ -1,0 +1,66 @@
+<! DOCTYPE html>
+<html lang="en" dir="ltr"> 
+    <head>
+        <meta charset="utf-8">
+        <title> Genese Admin Form</title>
+        <link rel="stylesheet" href="stylee.css">
+        <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+
+    </head>
+    <body>
+            <div id="noCognitoMessage" class="configMessage" style="display: none;">
+                    <div class="backdrop"></div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">No Cognito User Pool Configured</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>There is no user pool configured in <a href="/js/config.js">/js/config.js</a>. You'll configure this in Module 2 of the workshop.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <section class="form-wrap">
+        <form id="registrationform">
+        <div class="Login-box">
+            <h1>Login</h1>
+            <div class="textbox">
+                <input type="text" placeholder="Email" id="emailInputRegister" pattern=".*" name="" value="" required>
+
+            </div>
+
+            <div class="textbox">
+                    <input type="password" placeholder="Password" id="passwordInputRegister" pattern=".*" name="" value="" required>
+    
+                </div>
+                <div class="textbox">
+                        <input type="password" placeholder="Re-type Password" id="password2InputRegister" pattern=".*" name="" value="" required>
+        
+                    </div>
+
+                <input class="btttn" type="submit" name="" value="submit">
+
+        </div>
+    </form>
+</section>  -->
+
+<section class="form-wrap">
+        <h1>Register</h1>
+        <form id="registrationForms" class="message_form">
+          <input type="email" id="emailInputRegister" placeholder="Email" pattern=".*" required>
+          <input type="password" id="passwordInputRegister" placeholder="Password" pattern=".*" required>
+          <input type="password" id="password2InputRegister" placeholder="Confirm Password" pattern=".*" required>
+
+          <input type="submit" value="submit">
+        </form>
+    </section>
+
+
+    <script src="js/vendor/jquery-3.1.0.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/aws-cognito-sdk.min.js"></script>
+        <script src="js/vendor/amazon-cognito-identity.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/cognito-auth.js"></script>
+    </body>
+</html>

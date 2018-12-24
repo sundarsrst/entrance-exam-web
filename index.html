@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Genese Entrance Web</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+<link href="style-two.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+</head>
+<body>
+
+<div id="style2_wrapper">
+	<div id="style2_top">
+        <div id="style2_menu">
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="signupp.html">examinee form</a></li>
+                <li><a href="exam.html">Entrance Exam</a></li>
+                <li><a href="registerUser.html">register admin</a></li>
+               
+            </ul>    	
+        </div>
+        <div id="login_box">
+            <form action="#" method="get">
+                <input type="text" value="Username" name="q" size="10" class="login_field" title="username" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="text" value="Password" name="q" size="10" class="login_field" title="password" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="Login" value="" id="login_btn" title="Login" />
+            </form>
+        </div>
+    </div>
+  
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head> <title>the dynamic web form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+    $("#btn2").click(function(){
+        //  var valuex = $("#test0").val();
+        $("#test").html(" <form> <input type='text' placeholder = 'sundar' id='fname' value= a> </br> <input type='text' placeholder = 'shrestha' id='lname' required>  </br> <input type='text' placeholder = 'Balaju' id='adrs' required> </br> <input type='text' placeholder = '9843082626' id='phn' required> </br> <input id='inputFile' type='file'> </br> <textarea id='text1' rows='1' cols='17' value = valuex> </textarea> </br> <textarea rows='1' cols='17'> </textarea> </br> <textarea rows='1' cols='17'> </textarea> </form>");
+    });
+    // var a = document.getElementById('test0').value;
+    // alert(a);
+    
+});
+</script>
+
+<script> 
+
+$(document).ready(function(){
+  $("#btn3").click(function(){
+    alert("here the value: " + $("#test0").val());
+  });
+});
+
+
+
+</script>
+
+
+</head>
+<body>
+
+
+<p id="test">your form will be created dynamically.</p> </br>
+<p>Input field: <input type="text" id="test0" value=""></p>
+
+
+
+
+
+<button id="btn2">Create Dynamic form</button>
+
+<button id="btn3">Show retrieved value</button>
+
+<script> 
+// var a = document.getElementById('test0').value;
+// alert(a);
+
+
+</script>
+
+</body>
+</html>

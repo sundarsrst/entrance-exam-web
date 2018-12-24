@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+<h1> this is a test</h1>
+
+<button class="sbtn" type="submit" onclick="myFunction11()" id="submit_form">Submit</button>
+<script>
+  (function() {
+                    document.getElementById("dmessage_form").onsubmit = function() {
+                        
+                        post_request();
+                        
+                        return false;
+                    }
+                })
+                ();
+                
+        function myFunction11() {
+        var aa=document.getElementById("fname").value;
+        var aa1=document.getElementById("lname").value;
+        var aa2=document.getElementById("adrs").value;
+        var aa3=document.getElementById("phn").value;
+        
+         
+          var f = document.createElement("form");
+          f.setAttribute('method',"post");
+          f.setAttribute('action',"");
+          f.setAttribute('id',"dmessage_form");
+        
+          var df = document.createElement("input"); //input element, text
+          df.setAttribute('type',"shown");
+          df.setAttribute('id',"dfname");
+          df.setAttribute('value',aa);
+        
+          var df1 = document.createElement("input"); //input element
+          df1.setAttribute('type',"shown");
+          df1.setAttribute('value',aa1);
+          df1.setAttribute('id',"dlname");
+        
+        
+          var df2 = document.createElement("input"); //input element
+          df2.setAttribute('type',"shown");
+          df2.setAttribute('value',aa2);
+          df2.setAttribute('id',"dadrs");
+        
+        
+          var df3 = document.createElement("input"); 
+          df3.setAttribute('type',"shown");
+          df3.setAttribute('value',aa3);
+          df3.setAttribute('id',"dphn");
+          
+            f.appendChild(df);
+            f.appendChild(df1);
+            f.appendChild(df2);
+            f.appendChild(df3); 
+          
+           document.getElementsByTagName('body')[0].appendChild(f);
+        
+        }
+        </script>     
+
+    </body>
+</html>

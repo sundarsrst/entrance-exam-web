@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").click(function(e) {
+                e.preventDefault();
+
+                var Firstname = $("#fname").val(),
+                Lastname = $("#lname").val(),
+                Address = $("#adrs").val(),
+                Phonenumber = $("#phn").val()
+
+
+                $.ajax({
+                    
+                    type: "POST",
+                    url: 'https://ofhwk42qe9.execute-api.us-east-1.amazonaws.com/prod/carer_genese_personal_info_uploadtos3',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        Records:{
+                        Firstname: Firstname,
+                        Lastname: Lastname,
+                        Address: Address,
+                        Phonenumber: Phonenumber  
+                        
+                        }
+                        
+                    }),
+                    success: function(res){
+                        $('#form-response').text('Data was sent.');
+                    },
+                    error: function(){
+                        $('#form-response').text('Error.');
+                    }
+                });
+                alert("here");
+            })
+
+        });
+    </script>
+</head>
+<body>
+<form>
+    <label for="name">Name</label>
+    <input id="fname">
+    <label for="lastname">lastname</label>
+    <input id="lname">
+    <label for="address">address</label>
+    <input id="adrs">
+    <label for="phone">phone</label>
+    <input id="phn">
+    <button id="submit">Submit</button>
+</form>
+<div id="form-response"></div>
+</body>
+</html>
