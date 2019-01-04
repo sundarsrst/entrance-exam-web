@@ -24,17 +24,16 @@ function clearText(field)
         <div id="style2_menu">
             <ul>
                 <li><a href="index.html" class="current">Home</a></li>
-                <li><a href="signupp.html">examinee form</a></li>
-                <li><a href="exam.html">Entrance Exam</a></li>
-                <li><a href="registerUser.html">register admin</a></li>
+                <li><a href="integrated.html">examinee form</a></li>
+                <li><a href="register.html">register admin</a></li>
                
             </ul>    	
         </div>
         <div id="login_box">
-            <form action="#" method="get">
-                <input type="text" value="Username" name="q" size="10" class="login_field" title="username" onfocus="clearText(this)" onblur="clearText(this)" />
-                <input type="text" value="Password" name="q" size="10" class="login_field" title="password" onfocus="clearText(this)" onblur="clearText(this)" />
-                <input type="submit" name="Login" value="" id="login_btn" title="Login" />
+            <form id="signinForm">
+                <input type="email" id="emailInputSignin" value="Username" name="q" size="10" class="login_field" title="username" onfocus="clearText(this)" onblur="clearText(this)" required>
+                <input type="password" id="passwordInputSignin" value="Password" name="q" size="10" class="login_field" title="password" pattern=".*" onfocus="clearText(this)" onblur="clearText(this)" required>
+                <input type="submit" value="" id="login_btn"  />
             </form>
         </div>
     </div>
@@ -42,5 +41,11 @@ function clearText(field)
     
 </div>
 
+<script src="js/vendor/jquery-3.1.0.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/aws-cognito-sdk.min.js"></script>
+<script src="js/vendor/amazon-cognito-identity.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/cognito-auth.js"></script>
 </body>
 </html>
